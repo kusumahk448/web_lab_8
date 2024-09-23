@@ -1,24 +1,24 @@
 import "./App.css"
-import AnimalShow from "./AnimalShow";
+import Restaurant from "./Restaurant";
 import { useState } from "react";
-function getRandomAnimal(){
-    let animals=['cat','dog','horse','gator','bird','cow']
-    return animals[Math.floor(Math.random()*animals.length)]
+function getRandomimage(){
+    let restaurant=['image1','image2','image3','image4','image5','image6']
+    return restaurant[Math.floor(Math.random()*restaurant.length)]
 }
 
 function App(){
-   const [animals,setAnimals]=useState([]) 
+   const [restaurant,setImages]=useState([]) 
     const handleClick=()=>{       
-       setAnimals([...animals,getRandomAnimal()])               
+       setImages([...restaurant,getRandomimage()])               
     }
 
-    const renderedAnimals=animals.map((animal,index)=>{
-       return <AnimalShow type={animal} key={index} />
+    const renderedImage=restaurant.map((restaurant,index)=>{
+       return <Restaurant type={restaurant} key={index} />
 
     })
     return <div className="app">
-        <button onClick={handleClick}>Add Animal</button>
-        <div className="animal-list">{renderedAnimals}</div>
+        <button onClick={handleClick}>Add Restaurant Images</button>
+        <div className="image-list">{renderedImage}</div>
         
     </div>
 }

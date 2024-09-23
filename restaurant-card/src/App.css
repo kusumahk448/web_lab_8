@@ -12,7 +12,7 @@ button{
   width: 30%;
 }
 
-.animal-list{
+.image-list{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
